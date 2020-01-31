@@ -54,6 +54,16 @@ const ColorList = ({ colors, updateColors }) => {
       });
   };
 
+  const handleAdd = e => {
+    e.preventDefault();
+    axiosWithAuth()
+      .post("/colors", colorToAdd)
+      .then(response => {
+        updateColors(response.data);
+        history.push("/bubble-page");
+      });
+  };
+
   return (
     <div className="colors-wrap">
       <h2>colors</h2>
@@ -106,8 +116,33 @@ const ColorList = ({ colors, updateColors }) => {
           </div>
         </form>
       )}
+      <form onSubmit={handleAdd} className="add-color-form">
+        <label htmlFor="color" />
+        <p>Color</p>
+        <input
+          value={colorToAdd.color}
+          type="text"
+          onChange={e =>
+            setColorToAdd({ ...colorToAdd, color: e.target.value })
+          }
+          name="color"
+        />
+        <label htmlFor="hex" />
+        <p>Color Code</p>
+        <input
+          type="text"
+          value={colorToAdd.code.hex}
+          onChange={e =>
+            setColorToAdd({
+              ...colorToAdd,
+              code: { hex: e.target.value }
+            })
+          }
+          name="hex"
+        />
+        <button className="add-color-btn">Add Color</button>
+      </form>
       <div className="spacer" />
-      {/* stretch - build another form here to add a color */}
     </div>
   );
 };
