@@ -60,29 +60,29 @@ body,
   margin-right: 36px;
 }
 
-form {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
+// form {
+//   margin-top: 60px;
+//   display: flex;
+//   flex-direction: column;
 
-  legend {
-    padding-left: 40px;
-    font-weight: bold;
-    text-align: left;
-    text-decoration: underline;
-    margin-bottom: 16px;
-  }
+//   legend {
+//     padding-left: 40px;
+//     font-weight: bold;
+//     text-align: left;
+//     text-decoration: underline;
+//     margin-bottom: 16px;
+//   }
 
-  label {
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 36px 4px 40px;
-  }
+//   label {
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 4px 36px 4px 40px;
+//   }
 
-  input {
-    width: 100px;
-  }
-}
+//   input {
+//     width: 100px;
+//   }
+// }
 
 .button-row {
   display: flex;
@@ -91,9 +91,73 @@ form {
 
   button {
     border: none;
-    background-color: black;
+    background-color: #011c36;
     color: white;
-    padding: 3px 8px;
-    margin-top: 16px;
   }
+}
+
+// --- LOGIN ---
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin-top: 10% !important;
+  margin: 0 auto;
+
+  input {
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  button {
+    margin-top: 30px !important;
+    border-radius: 25px;
+    padding: 2%;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+// --- EDIT COLOR FORM :-moz-ui-invalid
+.edit-color-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  input {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 1.9%;
+    border-radius: 25px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  button {
+    padding: 5%;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+
+// --- ADD COLOR FORM ---
+
+.add-color-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.add-color-btn {
+  margin-top: 5%;
+  border: none;
+  background-color: #011c36;
+  color: white;
+  padding: 5%;
+  border-radius: 20px;
+  cursor: pointer;
 }
